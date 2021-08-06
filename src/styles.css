@@ -12,12 +12,13 @@ main,
   height: 100%;
   margin: 0;
   padding: 0;
+
 }
 
 body {
   font-family: inter;
   color: black;
-  background: #f0f0f0;
+  background: tomato;
 }
 
  h1{
