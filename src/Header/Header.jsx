@@ -167,7 +167,7 @@ export default function Header() {
               fontSize: "2rem",
             }}
           >
-            hi. This is Zulker
+            hi. This is Zulker and this site is under development.
           </web.h1></div>
           <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 0], fov: 35 }}>
             <three.pointLight
