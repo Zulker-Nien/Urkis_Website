@@ -112,7 +112,7 @@ export default function Header() {
         <web.main
           style={{ background: props.open.to([0, 1], ["#fff", "#FFFF00"]) }}
         >
-          <web.h1
+          <web.h2
             style={{
               opacity: props.open.to([0, 1], [1, 0]),
               transform: props.open.to(
@@ -120,8 +120,8 @@ export default function Header() {
               ),
             }}
           >
-            hi. This is Zulker
-          </web.h1>
+            hi. This is Zulker and this site is under development.
+          </web.h2>
           <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 0], fov: 35 }}>
             <three.pointLight
               position={[10, 10, 10]}
