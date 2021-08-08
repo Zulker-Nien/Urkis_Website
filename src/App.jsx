@@ -13,7 +13,7 @@ const vec = new THREE.Vector3()
 function Model({ open, hinge, ...props }) {
   const group = useRef()
   // Load model
-  const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/mac-draco.glb')
+  const { nodes, materials } = useGLTF(window.location.origin + '/mac-draco.glb')
   // Take care of cursor state on hover
   const [hovered, setHovered] = useState(false)
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
