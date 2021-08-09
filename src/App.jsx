@@ -7,7 +7,8 @@ import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
-import NavLogo from "./Zulker_Logo_W.png"
+import NavLogo from "./Zulker_Logo_W.png";
+import Rellax from "rellax";
 import "./styles.scss";
 
 const vec = new THREE.Vector3();
@@ -112,14 +113,17 @@ export default function App() {
       setNavbarbg(false);
     }
   };
-
+  useEffect(() => {
+    new Rellax(".rellax");
+  }, []);
   window.addEventListener("scroll", changebg);
   // const [showTxt, setTxt] = useState(false)
   // We turn this into a spring animation that interpolates between 0 and 1
   const props = useSpring({ open: Number(open) });
+
   return (
     <>
-      <div className="Container">
+      <div className="Container" id="container">
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
@@ -169,10 +173,33 @@ export default function App() {
             <ul className="NavListUL">
               <li>About Me</li>
               <li>Education & Training</li>
-              <li><img src={NavLogo}/></li>
+              <li>
+                <img src={NavLogo} />
+              </li>
               <li>Projects</li>
               <li>Connect</li>
             </ul>
+          </div>
+          <div className="Contents">
+            {/* Section-1 */}
+            <section className="Section1">
+              <div className="Left1">
+                <h2
+                className="rellax"
+                  data-rellax-speed="1"
+                  data-rellax-xs-speed="1"
+                  data-rellax-percentage="0.59"
+                >
+                  Who Am I?
+                </h2>
+              </div>
+              <div className="Right1">
+                <h2 className="rellax"
+                  data-rellax-speed="4"
+                  data-rellax-xs-speed="1"
+                  data-rellax-percentage="0.59">A Creative Developer</h2>
+              </div>
+            </section>
           </div>
         </div>
       </div>
