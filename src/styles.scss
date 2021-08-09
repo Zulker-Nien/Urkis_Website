@@ -117,6 +117,7 @@ h1 {
 .NavbarAbs {
   width: 100vw;
   height: 10vh;
+  z-index: 1;
   background-color: #1d1d1d;
   transition: 2s all ease-in-out;
   position: fixed;
@@ -150,6 +151,34 @@ h1 {
       img {
         width: 40%;
         animation: RotatingObject 3s alternate infinite;
+      }
+    }
+  }
+}
+
+.Contents {
+  height: 100%;
+  margin-top: 10vh;
+  .Section1 {
+    // background-color: blue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // padding: 0 5%;
+    .Left1 {
+      h2 {
+        font-size: 5rem;
+        // background-color: orangered;
+        padding: 0;
+      }
+    }.Right1 {
+      // background-color: orangered;
+      h2 {
+        font-size: 5rem;
+        width: 100%;
+        // background-color: orange;
+        padding: 0;
       }
     }
   }
