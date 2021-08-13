@@ -169,7 +169,8 @@ export default function App() {
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
 
-<h2 style={{color:"red", position:"absolute"}}>Under Development. Click on Laptop to Start</h2>
+<h2 style={{color:"red", position:"absolute"}}>Under Development. Click on Laptop to Start.</h2>
+<h2 style={{color:"red", position:"absolute", marginTop:"10vh"}}>For Web View Currently(Making Mobile View)</h2>
           <web.h1
             style={{
               opacity: props.open.to([0, 1], [1, 0]),
@@ -219,7 +220,7 @@ export default function App() {
               <li>
                 <img src={NavLogo} />
               </li>
-              <li>Projects</li>
+              <li>Projects & Experience</li>
               <li>Connect</li>
             </ul>
           </div>
