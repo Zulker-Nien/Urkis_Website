@@ -9,6 +9,9 @@ import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
 import NavLogo from "./Zulker_Logo_W.png";
 import Rellax from "rellax";
+import Post from "./Post";
+import Word from "./Word";
+
 import "./styles.scss";
 
 const vec = new THREE.Vector3();
@@ -105,6 +108,7 @@ export default function App() {
   // This flag controls open state, alternates between true & false
   const [open, setOpen] = useState(false);
   const [navbarbg, setNavbarbg] = useState(false);
+  const [navbarbg1, setNavbarbg1] = useState(false);
 
   const changebg = () => {
     if (window.scrollY >= "815") {
@@ -113,10 +117,31 @@ export default function App() {
       setNavbarbg(false);
     }
   };
+  const changebg1 = () => {
+    if (window.scrollY >= "10") {
+      setNavbarbg1(true);
+    } else {
+      setNavbarbg1(false);
+    }
+  };
+  const changebg2 = () => {
+    if (window.scrollY >= "10") {
+      setNavbarbg1(true);
+    } else {
+      setNavbarbg1(false);
+    }
+  };
   useEffect(() => {
-    new Rellax(".rellax");
+    new Rellax(".rellax", {
+      horizontal: true,
+
+      //Disable vertical Parallax Scrolling
+      vertical: false,
+    });
   }, []);
   window.addEventListener("scroll", changebg);
+  window.addEventListener("scroll", changebg1);
+  window.addEventListener("scroll", changebg2);
   // const [showTxt, setTxt] = useState(false)
   // We turn this into a spring animation that interpolates between 0 and 1
   const props = useSpring({ open: Number(open) });
@@ -124,6 +149,12 @@ export default function App() {
   return (
     <>
       <div className="Container" id="container">
+        {open && (
+          <div className={navbarbg1 ? "StartPrompt1" : "StartPrompt"}>
+            <h2>Lets Go</h2>
+            <div className="arrow down"></div>
+          </div>
+        )}
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
@@ -185,19 +216,50 @@ export default function App() {
             <section className="Section1">
               <div className="Left1">
                 <h2
-                className="rellax"
-                  data-rellax-speed="1"
-                  data-rellax-xs-speed="1"
+                  className="rellax"
+                  data-rellax-speed="0.1"
+                  data-rellax-xs-speed="0.1"
                   data-rellax-percentage="0.59"
                 >
                   Who Am I?
                 </h2>
               </div>
               <div className="Right1">
-                <h2 className="rellax"
-                  data-rellax-speed="4"
-                  data-rellax-xs-speed="1"
-                  data-rellax-percentage="0.59">A Creative Developer</h2>
+                <h2
+                  className="rellax"
+                  data-rellax-speed="2"
+                  data-rellax-xs-speed="2"
+                  data-rellax-percentage="0.59"
+                >
+                  A Creative Developer
+                </h2>
+              </div>
+            </section>
+            <section className="Section2">
+              <Canvas camera={{ position: [0, 2, 20], fov: 40 }}>
+                <fog attach="fog" args={["#cc7b32", 0, 500]} />
+                <Suspense fallback={null}>
+                  <Post />
+                </Suspense>
+              </Canvas>
+            </section>
+            <section className="Section3">
+              <div className="Left2">
+                <h2
+                  className="rellax"
+                  data-rellax-speed="0.1"
+                  data-rellax-xs-speed="0.1"
+                  data-rellax-percentage="0.59"
+                >
+                  What I do?
+                </h2>
+                <h3 data-rellax-speed="20" data-rellax-percentage="0.99">
+                  Just a small number of what I do is given here.
+                </h3>
+                <div className="KnowSkills"><h4>Click here to know my full specs.</h4></div>
+              </div>
+              <div className="Right2">
+                <Word />
               </div>
             </section>
           </div>
