@@ -350,4 +350,69 @@ h1 {
       }
     }
   }
+  .Section4 {
+    background-color: rgb(11, 45, 77);
+    height: 90vh;
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    // padding: 0 5%;
+    .Left2 {
+
+      transition: 0.3s ease-in-out;
+      h2 {
+        margin: 0;
+        font-size: 5rem;
+        // background-color: orangered;
+        padding: 0;
+        color: #efe22b;
+      }
+      h3 {
+        font-size: 1.3rem;
+        // background-color: orangered;
+        padding: 0;
+        color: #efe22b;
+      }
+      
+      .KnowSkills {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #efe22b;
+        border-radius: 20px;
+        transition: 0.3s ease-in-out;
+        z-index: 2;
+        h4{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 10vh;
+          width: 40vw;
+          transition: 0.3s ease-in-out;
+         }
+        :hover {
+          height: 10vh;
+          width: 100%;
+          background-color: #000;
+          color:#efe22c;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    .Right2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      h2{
+        color: #fff;
+      }
+    }
+  }
 }

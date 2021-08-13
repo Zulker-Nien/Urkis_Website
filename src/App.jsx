@@ -13,6 +13,8 @@ import Post from "./Post";
 import Word from "./Word";
 
 import "./styles.scss";
+import Fiverr from "./Fiverr";
+import Upwork from "./Upwork";
 
 const vec = new THREE.Vector3();
 
@@ -106,6 +108,7 @@ function Model({ open, hinge, ...props }) {
 
 export default function App() {
   // This flag controls open state, alternates between true & false
+
   const [open, setOpen] = useState(false);
   const [navbarbg, setNavbarbg] = useState(false);
   const [navbarbg1, setNavbarbg1] = useState(false);
@@ -132,12 +135,19 @@ export default function App() {
     }
   };
   useEffect(() => {
-    new Rellax(".rellax", {
-      horizontal: true,
+    const script = document.createElement("script");
 
-      //Disable vertical Parallax Scrolling
-      vertical: false,
-    });
+    script.src = "./script.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  useEffect(() => {
+    new Rellax(".rellax");
   }, []);
   window.addEventListener("scroll", changebg);
   window.addEventListener("scroll", changebg1);
@@ -158,6 +168,8 @@ export default function App() {
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
+
+<h2 style={{color:"red", position:"absolute"}}>Under Development. Click on Laptop to Start</h2>
           <web.h1
             style={{
               opacity: props.open.to([0, 1], [1, 0]),
@@ -217,8 +229,8 @@ export default function App() {
               <div className="Left1">
                 <h2
                   className="rellax"
-                  data-rellax-speed="0.1"
-                  data-rellax-xs-speed="0.1"
+                  data-rellax-speed="-3"
+                  data-rellax-xs-speed="-3"
                   data-rellax-percentage="0.59"
                 >
                   Who Am I?
@@ -229,7 +241,7 @@ export default function App() {
                   className="rellax"
                   data-rellax-speed="2"
                   data-rellax-xs-speed="2"
-                  data-rellax-percentage="0.59"
+                  data-rellax-percentage="0.99"
                 >
                   A Creative Developer
                 </h2>
@@ -245,21 +257,39 @@ export default function App() {
             </section>
             <section className="Section3">
               <div className="Left2">
+                <h2>What I do?</h2>
+                <h3>
+                  Just a specific number of what I am good at is given here -
+                </h3>
+                <div className="KnowSkills">
+                  <h4>Click here to know my full specs.</h4>
+                </div>
+              </div>
+              <div className="Right2">
+                <Word />
+              </div>
+            </section>
+            <section className="Section4">
+              <div className="Left2">
                 <h2
                   className="rellax"
                   data-rellax-speed="0.1"
                   data-rellax-xs-speed="0.1"
                   data-rellax-percentage="0.59"
                 >
-                  What I do?
+                  How to find me?
                 </h2>
-                <h3 data-rellax-speed="20" data-rellax-percentage="0.99">
-                  Just a small number of what I do is given here.
-                </h3>
-                <div className="KnowSkills"><h4>Click here to know my full specs.</h4></div>
+
+                <div className="KnowSkills">
+                  <h4>It's easy, click here</h4>
+                </div>
               </div>
               <div className="Right2">
-                <Word />
+                <div>
+                  <h2>You can also find me here:</h2>
+                </div>
+                <Upwork/>
+                <Fiverr/>
               </div>
             </section>
           </div>
