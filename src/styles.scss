@@ -357,7 +357,7 @@ h1 {
           justify-content: center;
           align-items: center;
           background-color: #1d1d1d;
-          
+
           border-radius: 20px;
           transition: 0.2s ease-in-out;
           h4 {
@@ -397,7 +397,7 @@ h1 {
     display: flex;
     align-items: flex-end;
     height: 90vh !important;
-z-index: -1;
+    z-index: -1;
     Canvas {
       height: 90vh !important;
       overflow: hidden !important;
@@ -526,10 +526,85 @@ z-index: -1;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    z-index: 202020;
+    z-index: 2020201;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 2px -50px 50px -2px rgba(0, 0, 0, 0.2);
     // padding: 0 5%;
+    .socialLinks {
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .github {
+        // width: 100%;
+        // height: 30%;
+        display: flex;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+        color: #d4d4d4;
+        h2 {
+          color: #d4d4d4;
+        }
+        font-size: 1rem;
+        background-color: #1d1d1d;
+        
+      }
+      .github:hover {
+        color: #1d1d1d;
+        h2{
+          color: #1d1d1d;
+        }
+        background-color: #d4d4d4;
+      }
+      .linkedIn {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+        color: #d4d4d4;
+        cursor: pointer;
+        font-size: 1rem;
+        h2 {
+          color: #d4d4d4;
+        }
+        background-color: #082f5c;
+        
+      }.linkedIn:hover {
+        color: #082f5c;
+        h2{
+          color: #082f5c;
+        }
+        background-color: #d4d4d4;
+      }
+      .facebook {
+        width: 100%;
+        height: 30%;
+        cursor: pointer;
+        h2 {
+          color: #d4d4d4;
+        }
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+        color: #d4d4d4;
+        font-size: 1rem;
+        background-color: #0559a7;
+      }
+      .facebook:hover {
+        color: #0559a7;
+        h2{
+          color: #0559a7;
+        }
+        background-color: #d4d4d4;
+      }
+    }
     @media (max-width: 980px) {
       // background-color: orange;
       height: 100vh;

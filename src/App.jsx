@@ -7,6 +7,8 @@ import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
+import { AiOutlineGithub, AiFillFacebook, AiFillLinkedin} from "react-icons/ai";
+
 import { NavLink } from "react-router-dom";
 import Rellax from "rellax";
 import Post from "./Post";
@@ -299,8 +301,10 @@ export default function App() {
                 </NavLink>
               </div>
               <div className="Right2">
-                <div>
-                  <h2>You can also find me here:</h2>
+                <div className="socialLinks">
+                  <div className="github"><h2 >Github</h2><AiOutlineGithub style={{fontSize:"2rem"}}/></div>
+                  <div className="linkedIn"><h2 >LinkedIn</h2><AiFillLinkedin style={{fontSize:"2rem"}}/></div>
+                  <div className="facebook"><h2 >Facebook</h2><AiFillFacebook style={{fontSize:"2rem"}}/></div>
                 </div>
                 <Upwork />
                 <Fiverr />
