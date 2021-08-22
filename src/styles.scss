@@ -101,7 +101,7 @@ h1 {
   margin: 0;
   opacity: 0;
   transition: 2 ease-in-out;
-  
+
   // background-color: orangered;
   h2 {
     // background-color: orchid;
@@ -135,13 +135,12 @@ h1 {
   @media (max-width: 980px) {
     visibility: hidden;
   }
-  
 }
 .ContainerOpen {
   height: 150vh;
   position: relative;
   background-color: #efe22b;
-  
+
   .Navbar {
     width: 100vw;
     height: 10vh;
@@ -151,14 +150,15 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     @media (max-width: 980px) {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       z-index: 202;
       background-color: transparent;
-      .menu{width: 100%;
+      .menu {
+        width: 100%;
         background-color: #efe22c;
         margin: 2% 0;
       }
@@ -191,39 +191,39 @@ h1 {
     }
     .NavListULM {
       visibility: hidden;
-    //   width: 100%;
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: flex-end;
-    //   list-style-type: none;
-    //   color: #1d1d1d;
-    //   cursor: pointer;
-      
-    //   :hover {
-    //     font-size: 1.1rem;
-    //   }
-    //   .lineContainer{
-    //     height:10vh;
-    //     width: 20vw;
-    //     padding: 0;
-    //     margin: 0;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-evenly;
-    //   }
-    //   li {
-    //     width: 15vw;
-    //     height: 7vh;
-    //     // background-color: #fafafa;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     // transition: 0.3s ease-in-out;
+      //   width: 100%;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: flex-end;
+      //   list-style-type: none;
+      //   color: #1d1d1d;
+      //   cursor: pointer;
 
-    //     img {
-    //       width: 40%;
-    //     }
-    //   }
+      //   :hover {
+      //     font-size: 1.1rem;
+      //   }
+      //   .lineContainer{
+      //     height:10vh;
+      //     width: 20vw;
+      //     padding: 0;
+      //     margin: 0;
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: space-evenly;
+      //   }
+      //   li {
+      //     width: 15vw;
+      //     height: 7vh;
+      //     // background-color: #fafafa;
+      //     display: flex;
+      //     justify-content: center;
+      //     align-items: center;
+      //     // transition: 0.3s ease-in-out;
+
+      //     img {
+      //       width: 40%;
+      //     }
+      //   }
     }
   }
 }
@@ -245,8 +245,8 @@ h1 {
     justify-content: center;
     z-index: 202;
     background-color: #1d1d1d;
-      padding: 0;
-    .menu{
+    padding: 0;
+    .menu {
       width: 100%;
       margin: 0% 0% 0% 0%;
       text-align: center;
@@ -292,8 +292,8 @@ h1 {
     :hover {
       font-size: 1.1rem;
     }
-    .lineContainer{
-      height:10vh;
+    .lineContainer {
+      height: 10vh;
       width: 20vw;
       display: flex;
       flex-direction: column;
@@ -339,12 +339,51 @@ h1 {
       }
     }
     .Right1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 0;
+
       // background-color: orangered;
       h2 {
         font-size: 5rem;
-        width: 100%;
+        // width: 100%;
         // background-color: orange;
         padding: 0;
+        .KnowSkills {
+          height: 10vh;
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #1d1d1d;
+          
+          border-radius: 20px;
+          transition: 0.2s ease-in-out;
+          h4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            width: 20vw;
+            font-size: 2rem;
+            border-radius: 20px;
+            color: #fff;
+            transition: 0.3s ease-in-out;
+          }
+          :hover {
+            height: 10vh;
+            width: 100%;
+            background-color: #fff;
+            color: #1d1d1d;
+            // font-size: 1.5rem;
+            box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+          }
+        }
         @media (max-width: 980px) {
           font-size: 3em;
           text-align: center;
@@ -355,18 +394,38 @@ h1 {
     // padding: 0 5%;
   }
   .Section2 {
+    display: flex;
+    align-items: flex-end;
+    height: 90vh !important;
+z-index: -1;
     Canvas {
-      height: 90vh;
+      height: 90vh !important;
+      overflow: hidden !important;
       // background-color: orchid;
     }
   }
   .Section3 {
-    background-color: #390113;
+    background-color: #210368;
     height: 90vh;
     // background-color: blue;
     display: flex;
     align-items: center;
+    z-index: 2020202;
     justify-content: space-around;
+    .container {
+      svg {
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+      }
+      display: inline-block;
+      position: absolute;
+      // position: relative;
+      width: 100%;
+      // padding-bottom: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+    }
     // padding: 0 5%;
     @media (max-width: 980px) {
       display: flex;
@@ -375,6 +434,9 @@ h1 {
       width: 100%;
     }
     .Left2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       @media (max-width: 980px) {
         // background-color: orange;
         margin: 3%;
@@ -386,6 +448,7 @@ h1 {
         // background-color: orangered;
         padding: 0;
         color: #efe22b;
+        text-shadow: rgb(0, 0, 0) 5px 5px 2px;
         @media (max-width: 980px) {
           font-size: 3rem;
           margin: 3%;
@@ -405,41 +468,35 @@ h1 {
 
       .KnowSkills {
         height: 10vh;
-        width: 40vw;
+        width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #efe22b;
+        background-color: #1d1d1d;
         border-radius: 20px;
-        transition: 1.5s ease-in-out;
+        transition: 0.2s ease-in-out;
         z-index: 2;
-        @media (max-width: 980px) {
-          width: 100%;
-        }
         h4 {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 10vh;
-          width: 40vw;
-          transition: 0.5s ease-in-out;
-          @media (max-width: 980px) {
-            width: 100%;
-          }
+          width: 20vw;
+          border-radius: 20px;
+          color: #fff;
+          transition: 0.3s ease-in-out;
         }
         :hover {
           height: 10vh;
-          width: 40vw;
-          background-color: #000;
-          color: #efe22c;
-          font-size: 1.5rem;
+          width: 100%;
+          background-color: #fff;
+          color: #1d1d1d;
+          // font-size: 1.5rem;
+          box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
           border-radius: 20px;
           cursor: pointer;
-          transition: 0.5s ease-in-out;
-          @media (max-width: 980px) {
-            width: 100%;
-            font-size: 1rem;
-          }
+          transition: 0.3s ease-in-out;
         }
       }
     }
@@ -447,7 +504,7 @@ h1 {
       Canvas {
         width: 50vw;
         height: 70vh;
-
+        text-shadow: rgb(54, 54, 54) 1px 2px 2px;
         // background-color: orchid;
         border-left: 0.5px solid #efe22b;
         box-shadow: 5px 20px #000;
@@ -461,13 +518,17 @@ h1 {
     }
   }
   .Section4 {
-    background-image: linear-gradient(to bottom,#390113, rgb(11, 45, 77));
-    height: 90vh;
+    background-image: linear-gradient(to bottom, #fff, #d4d4d4);
+    border-top: 5px solid rgba(0, 0, 0, 0.788);
+    height: 95vh;
     // background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    z-index: 202020;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px -50px 50px -2px rgba(0, 0, 0, 0.2);
     // padding: 0 5%;
     @media (max-width: 980px) {
       // background-color: orange;
@@ -475,12 +536,16 @@ h1 {
     }
     .Left2 {
       transition: 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       h2 {
         margin: 0;
         font-size: 5rem;
         // background-color: orangered;
         padding: 0;
-        color: #efe22b;
+        color: #1d1d1d;
+        text-shadow: rgb(54, 54, 54) 1px 2px 2px;
         @media (max-width: 980px) {
           // background-color: orange;
           margin: 3% 0%;
@@ -497,28 +562,32 @@ h1 {
 
       .KnowSkills {
         height: 10vh;
-        width: 100%;
+        width: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #efe22b;
+        background-color: #1d1d1d;
         border-radius: 20px;
-        transition: 0.3s ease-in-out;
+        transition: 0.2s ease-in-out;
         z-index: 2;
         h4 {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 10vh;
-          width: 40vw;
+          width: 20vw;
+          border-radius: 20px;
+          color: #fff;
           transition: 0.3s ease-in-out;
         }
         :hover {
           height: 10vh;
           width: 100%;
-          background-color: #000;
-          color: #efe22c;
-          font-size: 1.5rem;
+          background-color: #fff;
+          color: #1d1d1d;
+          // font-size: 1.5rem;
+          box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
           border-radius: 20px;
           cursor: pointer;
           transition: 0.3s ease-in-out;
@@ -535,7 +604,7 @@ h1 {
       }
       h2 {
         text-align: center;
-        color: #fff;
+        color: #1d1d1d;
       }
     }
   }

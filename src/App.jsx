@@ -156,9 +156,9 @@ export default function App() {
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
-           <h2 style={{ color: "orange", position: "absolute" }}>
-            Under Development. Click on Laptop to Start.
-            Updated as of : <span style={{ color: "red"}}>8th August,2021</span>
+          <h2 style={{ color: "orange", position: "absolute" }}>
+            Under Development. Click on Laptop to Start. Updated as of :{" "}
+            <span style={{ color: "red" }}>8th August,2021</span>
           </h2>
           {/* <h2 style={{ color: "red", position: "absolute", marginTop: "10vh" }}>
             For Web View Currently(Making Mobile View)
@@ -205,19 +205,27 @@ export default function App() {
         </web.main>
         <div className={open ? "ContainerOpen" : "ContainerClosed"}>
           {/* NAVBAR GOES HERE */}
-            <div className={navbarbg ? "NavbarAbs" : "Navbar"}>
-              <Navbar />
-            </div>
-          
-          <div className="Contents">
+          <div className={navbarbg ? "NavbarAbs" : "Navbar"}>
+            <Navbar />
+          </div>
+
+          <div className="Contents rellax"
+                  data-rellax-speed="0.1"
+                  data-rellax-xs-speed="0.1"
+                  data-rellax-percentage="0.59">
             {/* Section-1 */}
             <section className="Section1">
-              <div className="Left1">
+              <div
+                className="Left1 rellax"
+                data-rellax-speed="2"
+                // data-rellax-xs-speed="5"
+                data-rellax-percentage="0.19"
+              >
                 <h2
                   className="rellax"
                   data-rellax-speed="-3"
-                  data-rellax-xs-speed="5"
-                  data-rellax-percentage="0.59"
+                  // data-rellax-xs-speed="5"
+                  data-rellax-percentage="0.19"
                 >
                   Who Am I?
                 </h2>
@@ -225,12 +233,18 @@ export default function App() {
               <div className="Right1">
                 <h2
                   className="rellax"
-                  data-rellax-speed="2"
-                  data-rellax-xs-speed="2"
-                  data-rellax-percentage="0.99"
+                  data-rellax-speed="-4"
+                  data-rellax-xs-speed="1"
+                  data-rellax-percentage="0.19"
                 >
-                  A Creative Developer
+                  A Creative Developer<div className="KnowSkills rellax"
+                  // data-rellax-speed="-4"
+                  data-rellax-xs-speed="1"
+                  data-rellax-percentage="0.19">
+                  <h4>Get to know me.</h4>
+                </div>
                 </h2>
+                
               </div>
             </section>
             <section className="Section2">
@@ -242,13 +256,23 @@ export default function App() {
               </Canvas>
             </section>
             <section className="Section3">
+              <div class="container">
+                <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                  <path
+                    d="M0,50 C100,200 550,0 500,100 L500,150 L0,150 Z"
+                    style={{
+                      stroke: "none",
+                      fill: "#210368",
+                      boxShadow: "2px 50px 2px 2px rgba(0, 0, 0, 0.2);",
+                    }}
+                  ></path>
+                </svg>
+              </div>
               <div className="Left2">
                 <h2>What I do?</h2>
-                <h3>
-                  Just a specific number of what I am good at is given here -
-                </h3>
+                <h3>Want to know more about my skills?</h3>
                 <div className="KnowSkills">
-                  <h4>Click here to know my full specs.</h4>
+                  <h4>Click here</h4>
                 </div>
               </div>
               <div className="Right2">
