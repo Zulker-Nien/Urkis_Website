@@ -24,7 +24,7 @@ function Word({ children, ...props }) {
     // Make text face the camera
     ref.current.quaternion.copy(camera.quaternion)
     // Animate font color
-    ref.current.material.color.lerp(color.set(hovered ? '#fa2720' : 'white'), 0.1)
+    ref.current.material.color.lerp(color.set(hovered ? '#1d1d1d' : 'white'), 0.1)
   })
   return <Text ref={ref} onPointerOver={over} onPointerOut={out} {...props} {...fontProps} children={children} />
 }
@@ -49,7 +49,7 @@ export default function App() {
       <>
     <Canvas className="word"dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
       <fog attach="fog" args={['#efe22b', 0, 80]} />
-      <Cloud count={6} radius={20} />
+      <Cloud count={7} radius={30} />
       <TrackballControls />
     </Canvas>
     </>
