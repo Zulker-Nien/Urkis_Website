@@ -7,14 +7,14 @@ import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
-import NavLogo from "./Zulker_Logo_W.png";
+import { NavLink } from "react-router-dom";
 import Rellax from "rellax";
 import Post from "./Post";
 import Word from "./Word";
-
 import "./styles.scss";
 import Fiverr from "./Fiverr";
 import Upwork from "./Upwork";
+import Navbar from "./Navbar";
 
 const vec = new THREE.Vector3();
 
@@ -135,18 +135,6 @@ export default function App() {
     }
   };
   useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src = "./script.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-  useEffect(() => {
     new Rellax(".rellax");
   }, []);
   window.addEventListener("scroll", changebg);
@@ -168,9 +156,12 @@ export default function App() {
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
-
-<h2 style={{color:"red", position:"absolute"}}>Under Development. Click on Laptop to Start.</h2>
-<h2 style={{color:"red", position:"absolute", marginTop:"10vh"}}>For Web View Currently(Making Mobile View)</h2>
+          {/* <h2 style={{ color: "red", position: "absolute" }}>
+            Under Development. Click on Laptop to Start.
+          </h2>
+          <h2 style={{ color: "red", position: "absolute", marginTop: "10vh" }}>
+            For Web View Currently(Making Mobile View)
+          </h2> */}
           <web.h1
             style={{
               opacity: props.open.to([0, 1], [1, 0]),
@@ -213,17 +204,10 @@ export default function App() {
         </web.main>
         <div className={open ? "ContainerOpen" : "ContainerClosed"}>
           {/* NAVBAR GOES HERE */}
-          <div className={navbarbg ? "NavbarAbs" : "Navbar"}>
-            <ul className="NavListUL">
-              <li>About Me</li>
-              <li>Education & Training</li>
-              <li>
-                <img src={NavLogo} />
-              </li>
-              <li>Projects & Experience</li>
-              <li>Connect</li>
-            </ul>
-          </div>
+            <div className={navbarbg ? "NavbarAbs" : "Navbar"}>
+              <Navbar />
+            </div>
+          
           <div className="Contents">
             {/* Section-1 */}
             <section className="Section1">
@@ -231,7 +215,7 @@ export default function App() {
                 <h2
                   className="rellax"
                   data-rellax-speed="-3"
-                  data-rellax-xs-speed="-3"
+                  data-rellax-xs-speed="5"
                   data-rellax-percentage="0.59"
                 >
                   Who Am I?
@@ -281,16 +265,20 @@ export default function App() {
                   How to find me?
                 </h2>
 
-                <div className="KnowSkills">
+                <NavLink
+                  className="KnowSkills"
+                  to="/connect"
+                  style={{ textDecoration: "none", color: "#1d1d1d" }}
+                >
                   <h4>It's easy, click here</h4>
-                </div>
+                </NavLink>
               </div>
               <div className="Right2">
                 <div>
                   <h2>You can also find me here:</h2>
                 </div>
-                <Upwork/>
-                <Fiverr/>
+                <Upwork />
+                <Fiverr />
               </div>
             </section>
           </div>
