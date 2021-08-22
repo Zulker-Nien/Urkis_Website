@@ -156,10 +156,11 @@ export default function App() {
         <web.main
           style={{ background: props.open.to([0, 1], ["#f0f0f0", "#efe22b"]) }}
         >
-          {/* <h2 style={{ color: "red", position: "absolute" }}>
+           <h2 style={{ color: "orange", position: "absolute" }}>
             Under Development. Click on Laptop to Start.
+            Updated as of : <span style={{ color: "red"}}>8th August,2021</span>
           </h2>
-          <h2 style={{ color: "red", position: "absolute", marginTop: "10vh" }}>
+          {/* <h2 style={{ color: "red", position: "absolute", marginTop: "10vh" }}>
             For Web View Currently(Making Mobile View)
           </h2> */}
           <web.h1
