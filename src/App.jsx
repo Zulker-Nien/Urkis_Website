@@ -235,6 +235,7 @@ export default function App() {
                   data-rellax-speed="5"
                   data-type-animation="rellax"
                   data-rellax-desktop-speed="5"
+                  data-rellax-xs-speed="5"
                   data-rellax-percentage="0.5"
                 >
                   Who Am I?
@@ -244,9 +245,9 @@ export default function App() {
                 <h2
                   className="rellax"
                   data-rellax-speed="-5"
-                  data-rellax-desktop-spee="-5"
+                  data-rellax-desktop-speed="-4"
                   // data-type-animation="rellax"
-                  // data-rellax-xs-speed="1"
+                  data-rellax-xs-speed="1"
                   data-rellax-percentage="0.1"
                 >
                   A Creative Developer
