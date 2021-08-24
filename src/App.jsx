@@ -7,7 +7,11 @@ import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
-import { AiOutlineGithub, AiFillFacebook, AiFillLinkedin} from "react-icons/ai";
+import {
+  AiOutlineGithub,
+  AiFillFacebook,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import Rellax from "rellax";
 import Post from "./Post";
@@ -210,23 +214,28 @@ export default function App() {
             <Navbar />
           </div>
 
-          <div className="Contents rellax"
-                  data-rellax-speed="0.1"
-                  data-rellax-xs-speed="0.1"
-                  data-rellax-percentage="0.59">
+          <div
+            className="Contents rellax"
+            data-rellax-speed="5"
+            data-rellax-xs-speed="10"
+            data-type-animation="rellax"
+            data-rellax-percentage="0.5"
+          >
             {/* Section-1 */}
             <section className="Section1">
               <div
                 className="Left1 rellax"
                 data-rellax-speed="2"
-                data-rellax-xs-speed="2"
-                data-rellax-percentage="0.19"
+                data-type-animation="rellax"
+                // data-rellax-xs-speed="2"
+                data-rellax-percentage="0.5"
               >
                 <h2
                   className="rellax"
-                  data-rellax-speed="-3"
-                  data-rellax-xs-speed="5"
-                  data-rellax-percentage="0.19"
+                  data-rellax-speed="5"
+                  data-type-animation="rellax"
+                  data-rellax-desktop-speed="5"
+                  data-rellax-percentage="0.5"
                 >
                   Who Am I?
                 </h2>
@@ -234,13 +243,14 @@ export default function App() {
               <div className="Right1">
                 <h2
                   className="rellax"
-                  data-rellax-speed="-4"
-                  data-rellax-xs-speed="1"
-                  data-rellax-percentage="0.19"
+                  data-rellax-speed="-5"
+                  data-rellax-desktop-spee="-5"
+                  // data-type-animation="rellax"
+                  // data-rellax-xs-speed="1"
+                  data-rellax-percentage="0.1"
                 >
                   A Creative Developer
                 </h2>
-                
               </div>
             </section>
             <section className="Section2">
@@ -296,9 +306,18 @@ export default function App() {
               </div>
               <div className="Right2">
                 <div className="socialLinks">
-                  <div className="github"><h2 >Github</h2><AiOutlineGithub style={{fontSize:"2rem"}}/></div>
-                  <div className="linkedIn"><h2 >LinkedIn</h2><AiFillLinkedin style={{fontSize:"2rem"}}/></div>
-                  <div className="facebook"><h2 >Facebook</h2><AiFillFacebook style={{fontSize:"2rem"}}/></div>
+                  <div className="github">
+                    <h2>Github</h2>
+                    <AiOutlineGithub style={{ fontSize: "2rem" }} />
+                  </div>
+                  <div className="linkedIn">
+                    <h2>LinkedIn</h2>
+                    <AiFillLinkedin style={{ fontSize: "2rem" }} />
+                  </div>
+                  <div className="facebook">
+                    <h2>Facebook</h2>
+                    <AiFillFacebook style={{ fontSize: "2rem" }} />
+                  </div>
                 </div>
                 <Upwork />
                 <Fiverr />
