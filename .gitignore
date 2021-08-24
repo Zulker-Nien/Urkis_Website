@@ -1,5 +1,5 @@
-node_modules
-!*/node_modules/random-words
+node_modules/*
+!node_modules/random-words
 .DS_Store
 dist
 dist-ssr
