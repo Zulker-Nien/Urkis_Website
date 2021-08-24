@@ -8,7 +8,6 @@ import { a as web } from "@react-spring/web";
 import { action, makeObservable, observable } from "mobx";
 import { createContext } from "react";
 import { AiOutlineGithub, AiFillFacebook, AiFillLinkedin} from "react-icons/ai";
-
 import { NavLink } from "react-router-dom";
 import Rellax from "rellax";
 import Post from "./Post";
@@ -160,7 +159,7 @@ export default function App() {
         >
           <h2 style={{ color: "orange", position: "absolute" }}>
             Under Development. Click on Laptop to Start. Updated as of :{" "}
-            <span style={{ color: "red" }}>8th August,2021</span>
+            <span style={{ color: "red" }}>24th August,2021</span>
           </h2>
           {/* <h2 style={{ color: "red", position: "absolute", marginTop: "10vh" }}>
             For Web View Currently(Making Mobile View)
@@ -220,13 +219,13 @@ export default function App() {
               <div
                 className="Left1 rellax"
                 data-rellax-speed="2"
-                // data-rellax-xs-speed="5"
+                data-rellax-xs-speed="2"
                 data-rellax-percentage="0.19"
               >
                 <h2
                   className="rellax"
                   data-rellax-speed="-3"
-                  // data-rellax-xs-speed="5"
+                  data-rellax-xs-speed="5"
                   data-rellax-percentage="0.19"
                 >
                   Who Am I?
@@ -239,12 +238,7 @@ export default function App() {
                   data-rellax-xs-speed="1"
                   data-rellax-percentage="0.19"
                 >
-                  A Creative Developer<div className="KnowSkills rellax"
-                  // data-rellax-speed="-4"
-                  data-rellax-xs-speed="1"
-                  data-rellax-percentage="0.19">
-                  <h4>Get to know me.</h4>
-                </div>
+                  A Creative Developer
                 </h2>
                 
               </div>
